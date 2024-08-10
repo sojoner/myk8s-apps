@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://helm.ngc.nvidia.com/nvidia
-    targetRevision: v24.6.0  # Use the latest version available
+    targetRevision: v24.6.0
     chart: gpu-operator
     helm:
       values: |
@@ -19,7 +19,7 @@ spec:
         nfd:
           enabled: true
   destination:
-    server: https://kubernetes.default.svc
+    server: https://192.168.178.147:6443
     namespace: gpu-operator
   syncPolicy:
     automated:
